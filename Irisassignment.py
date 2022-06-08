@@ -43,7 +43,7 @@ st.write(pd.DataFrame(
 1 : 'iris-versicolor', 
 2: 'iris-virginica'})
 
-st.subheader("Prediction")
+st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
 st.write(prediction)
 
