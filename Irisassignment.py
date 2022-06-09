@@ -53,7 +53,7 @@ st.write(prediction_proba)
 st.write("##")
 st.write("##")
 
-image = Image.open('setosa2.jpg')
+image = Image.open('setosa.jpg')
 st.image(image, width=150)
 st.write("Learn more about : [Iris-setosa](https://en.wikipedia.org/wiki/Iris_setosa)")
 
