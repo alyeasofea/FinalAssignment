@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
@@ -28,9 +27,9 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/alyeasofea/FinalAssignment/main/IRIS.csv')
-feature_cols = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
-X = iris[feature_cols]
-Y = data.species
+iris_col = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+X = iris[iris_col]
+Y = iris.species
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
@@ -39,10 +38,9 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(pd.DataFrame(
- { 0 : 'iris-setosa', 
-1 : 'iris-versicolor', 
-2: 'iris-virginica'})
+st.write(pd.DataFrame({
+    'Species': ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'],}))
+
 
 st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
