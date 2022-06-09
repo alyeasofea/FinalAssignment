@@ -29,7 +29,7 @@ st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/alyeasofea/FinalAssignment/main/IRIS.csv')
 X = data.drop('species', axis = 1)
-Y = y = data['species']
+Y = data['species']
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
