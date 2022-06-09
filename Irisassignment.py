@@ -44,7 +44,8 @@ st.write(pd.DataFrame({
 
 st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
-st.write(prediction)
+st.write(pd.DataFrame({
+    'Iris Type':(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
