@@ -44,7 +44,7 @@ st.write(pd.DataFrame({'Species': ['Iris-setosa', 'Iris-versicolor', 'Iris-virgi
 st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
 st.write(pd.DataFrame({'Iris species':[prediction],}))
-st.write(prediction.set_index('Iris species')
+
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
