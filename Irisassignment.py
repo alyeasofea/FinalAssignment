@@ -28,9 +28,9 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/alyeasofea/FinalAssignment/main/IRIS.csv')
-iris_features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
-X = data.drop('iris_features', axis = 1)
-Y = data['species']
+feature_cols = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+X = iris[feature_cols]
+Y = data.species
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
