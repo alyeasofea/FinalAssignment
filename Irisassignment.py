@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from PIL import Image
 
 st.write("""
 # Simple Iris Flower Prediction App
@@ -48,3 +49,20 @@ st.write(pd.DataFrame({'Iris species':[prediction],}))
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
+
+st.write("##")
+st.write("##")
+
+image = Image.open('setosa2.jpg')
+st.image(image, width=150)
+st.write("Learn more about : [Iris-setosa](https://en.wikipedia.org/wiki/Iris_setosa)")
+
+st.write("##")
+image = Image.open('versicolor.jpg')
+st.image(image, width=140)
+st.write("Learn more about : [Iris-versicolor](https://en.wikipedia.org/wiki/Iris_versicolor)")
+
+st.write("##")
+image = Image.open('virginica.jpg')
+st.image(image, width=140)
+st.write("Learn more about : [Iris-virginica](https://en.wikipedia.org/wiki/Iris_virginica)")
